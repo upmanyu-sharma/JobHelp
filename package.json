@@ -1,0 +1,41 @@
+{
+  "name": "jobhelp",
+  "version": "1.0.0",
+  "description": "Track Your Job Search!",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build-client": "cd client && npm run build",
+    "server": "nodemon server --ignore client",
+    "client": "npm start --prefix client",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \" npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "bcryptjs": "^2.4.3",
+    "browserify-zlib": "^0.2.0",
+    "dgram": "^1.0.1",
+    "dns": "^0.2.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "http-status-codes": "^2.2.0",
+    "jsonwebtoken": "^9.0.1",
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.3.2",
+    "morgan": "^1.10.0",
+    "net": "^1.0.2",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "util": "^0.12.5",
+    "validator": "^13.9.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "concurrently": "^8.2.0",
+    "nodemon": "^2.0.22"
+  }
+}
