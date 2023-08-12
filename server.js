@@ -16,6 +16,8 @@ import AuthenticateUser from "./Middlewares/Auth.js";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import path from "path";
+import helmet from "helmet";
+import mongoSanitize from "express-mongo-sanitize";
 
 //routes
 import authroutes from "./routes/authroutes.js";
@@ -32,6 +34,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 //this will provide json data to us
 app.use(express.json());
+app.use(helmet());
+app.use(mongoSanitize());
 
 // app.get("/", (req, res) => {
 //   res.send("OAHKCV, MY FIRST SERVER");
