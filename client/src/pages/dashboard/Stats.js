@@ -5,8 +5,8 @@ import { StatsContainer, Loading } from "../../components";
 const Stats = () => {
   const { showStats, isLoading } = useAppContext();
   useEffect(() => {
-    // eslint-disable-next-line
     showStats();
+    // eslint-disable-next-line
   }, []);
 
   if (isLoading) {
