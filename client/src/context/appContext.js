@@ -211,12 +211,10 @@ const AppProvider = ({ children }) => {
   const updateUser = async (currentUser) => {
     dispatch({ type: UPDATE_USER_BEGIN });
     try {
-      // const { data } = await axios.patch("/api/v1/auth/update", currentUser);
       const { data } = await axios.patch(
         "/api/v1/auth/updateUser",
         currentUser
       );
-      // no token
       const { user, location, token } = data;
 
       dispatch({
